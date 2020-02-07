@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lab 4</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div th:each="addressBook: ${addressBooks}">
+    <h1 th:text="${addressBook.id}" />
+    <ul th:each="buddy: ${addressBook.buddyList}">
+        <li th:text="${buddy}" />
+    </ul>
+</div>
+</body>
+</html>
